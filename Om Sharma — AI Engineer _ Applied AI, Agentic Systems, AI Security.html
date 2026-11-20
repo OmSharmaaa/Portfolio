@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Om Sharma — AI Engineer | Applied AI, Agentic Systems, AI Security</title>
+<meta name="description" content="AI Engineer at Ksolves building agentic systems, MCP infrastructure, RAG platforms and AI security layers for production.">
+<meta property="og:title" content="Om Sharma — AI Engineer">
+<meta property="og:description" content="Engineering Intelligence Into Production.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0c;--surf:#111115;--line:#222229;--tx:#ededf0;--mut:#8b8b96;--blue:#4f8cff;--vio:#8b5cf6;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:112px 0;position:relative}
+.eyebrow{font:500 12px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
+h2{font-size:clamp(28px,4vw,42px);line-height:1.15;letter-spacing:-.025em;margin:0 0 20px;font-weight:600}
+p.lead{color:var(--mut);max-width:680px;margin:0}
+.grad{background:linear-gradient(100deg,#fff 10%,#9db8ff 55%,#b79cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-area-inset-top,0px);background:rgba(10,10,12,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+nav .links{display:flex;gap:26px;font-size:14px;color:var(--mut)}
+nav .links a:hover{color:var(--tx)}
+.logo{font:500 14px "JetBrains Mono",monospace}
+.logo b{color:var(--blue)}
+@media(max-width:720px){nav .links{display:none}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font-size:14px;font-weight:500;border:1px solid var(--line);transition:.2s;cursor:pointer;background:transparent;color:var(--tx)}
+.btn.pri{background:var(--tx);color:#0a0a0c;border-color:var(--tx)}
+.btn.pri:hover{box-shadow:0 0 0 4px rgba(79,140,255,.18)}
+.btn:hover{border-color:#3a3a46}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+#hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+#net{position:absolute;inset:0;width:100%;height:100%;opacity:.55;pointer-events:none}
+#hero::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 20% 30%,rgba(79,140,255,.09),transparent 70%),radial-gradient(40% 40% at 85% 60%,rgba(139,92,246,.08),transparent 70%);pointer-events:none}
+#hero .wrap{position:relative;z-index:1}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font:400 13px "JetBrains Mono",monospace;color:var(--mut);margin-bottom:28px}
+.meta span{display:inline-flex;align-items:center;gap:8px}
+.dot{width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 8px #34d399}
+h1{font-size:clamp(40px,7vw,80px);line-height:1.03;letter-spacing:-.04em;margin:0 0 24px;font-weight:600;max-width:860px}
+.hero-p{color:var(--mut);max-width:640px;font-size:18px;margin:0 0 32px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:56px}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.term{border:1px solid var(--line);background:rgba(17,17,21,.85);border-radius:12px;overflow:hidden;max-width:460px;font:400 13px/1.7 "JetBrains Mono",monospace}
+.term .bar{display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line)}
+.term .bar i{width:9px;height:9px;border-radius:50%;background:#2a2a32}
+.term .body{padding:14px 16px;min-height:76px}
+.term .p{color:var(--blue)}.term .o{color:var(--mut)}
+.cur{display:inline-block;width:7px;height:14px;background:var(--tx);vertical-align:middle;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.flow{border:1px solid var(--line);background:rgba(17,17,21,.7);border-radius:14px;padding:22px}
+.flow .row{display:flex;align-items:stretch;gap:0}
+.node{flex:1;text-align:center;padding:14px 6px;border:1px solid var(--line);border-radius:10px;background:var(--surf);cursor:pointer;font-size:13px;font-weight:500;transition:.25s;position:relative;color:var(--mut);font-family:inherit}
+.node.on,.node:hover{border-color:var(--blue);color:var(--tx);box-shadow:0 0 24px -6px rgba(79,140,255,.5)}
+.link{flex:0 0 28px;align-self:center;height:1px;background:var(--line);position:relative;overflow:hidden}
+.link::after{content:"";position:absolute;top:0;left:-40%;width:40%;height:1px;background:linear-gradient(90deg,transparent,var(--blue),transparent);animation:fl 2.2s linear infinite}
+@keyframes fl{to{left:100%}}
+.flow .cap{margin-top:16px;font-size:14px;color:var(--mut);min-height:48px}
+.flow .cap b{color:var(--tx);font-weight:500}
+@media(max-width:720px){.flow .row{flex-direction:column}.link{flex:0 0 18px;width:1px;height:18px}.link::after{display:none}}
+@media(min-width:960px){.hero-grid{grid-template-columns:auto 1fr;align-items:end;gap:32px}}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.tag{font:400 12px "JetBrains Mono",monospace;padding:5px 11px;border:1px solid var(--line);border-radius:999px;color:var(--mut);background:var(--surf)}
+.about{display:grid;gap:48px;grid-template-columns:1fr}
+@media(min-width:900px){.about{grid-template-columns:1.1fr 1fr}}
+.about p{color:var(--mut);margin:0 0 18px}
+.cells{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.cells div{background:var(--surf);padding:18px;font-size:14px}
+.cells small{display:block;color:var(--mut);font-size:12px;margin-top:2px}
+.proj{border:1px solid var(--line);background:var(--surf);border-radius:16px;margin-bottom:16px;transition:border-color .25s}
+.proj:hover,.proj.open{border-color:#34344a}
+.proj>button{all:unset;box-sizing:border-box;display:block;width:100%;padding:28px;cursor:pointer}
+.proj>button:focus-visible{outline:2px solid var(--blue);border-radius:16px}
+.ph{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.num{font:400 12px "JetBrains Mono",monospace;color:var(--vio)}
+.proj h3{margin:6px 0 8px;font-size:22px;letter-spacing:-.02em;font-weight:600}
+.proj .sum{color:var(--mut);margin:0;max-width:720px}
+.chev{flex:none;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:.3s;color:var(--mut)}
+.open .chev{transform:rotate(180deg);color:var(--tx);border-color:var(--blue)}
+.panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.open .panel{grid-template-rows:1fr}
+.panel>div{overflow:hidden}
+.pin{padding:0 28px 28px;border-top:1px solid var(--line);margin:0 28px;padding:24px 0 4px}
+.pin h4{font:500 12px "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin:0 0 12px}
+.pin ul{margin:0 0 24px;padding:0;list-style:none}
+.pin li{padding:6px 0 6px 20px;position:relative;font-size:15px;color:#c9c9d1}
+.pin li::before{content:"";position:absolute;left:0;top:15px;width:8px;height:1px;background:var(--blue)}
+.arch{display:flex;flex-wrap:wrap;align-items:center;gap:6px 0;margin-bottom:24px}
+.arch span{font:400 12px "JetBrains Mono",monospace;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#0d0d10}
+.arch i{font-style:normal;color:var(--blue);padding:0 8px}
+.status{display:grid;gap:12px;margin-bottom:24px}
+@media(min-width:720px){.status{grid-template-columns:1fr 1fr}}
+.status div{border:1px dashed var(--line);border-radius:10px;padding:14px;font-size:14px;color:var(--mut)}
+.status b{display:block;font:500 11px "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.status .a b{color:#34d399}.status .b b{color:#fbbf24}
+.gh{display:inline-flex;gap:8px;align-items:center;font-size:14px;color:var(--tx);padding:9px 14px;border:1px solid var(--line);border-radius:8px;margin-bottom:12px}
+.gh:hover{border-color:var(--blue)}
+.cats{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:760px){.cats{grid-template-columns:1fr 1fr}}
+.cat{border:1px solid var(--line);background:var(--surf);border-radius:14px;padding:26px}
+.cat h3{margin:0 0 4px;font-size:16px;font-weight:600}
+.cat p{margin:0 0 14px;font-size:13px;color:var(--mut)}
+.tl{border-left:1px solid var(--line);margin-left:6px}
+.job{position:relative;padding:0 0 44px 32px}
+.job::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1px solid var(--blue)}
+.job.now::before{background:var(--blue);box-shadow:0 0 12px var(--blue)}
+.job h3{margin:0;font-size:19px;font-weight:600}
+.job .d{font:400 13px "JetBrains Mono",monospace;color:var(--mut);margin:4px 0 14px}
+.job ul{margin:0;padding-left:18px;color:#c9c9d1}
+.job li{margin-bottom:6px}
+.badge{display:inline-block;margin-top:10px;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid rgba(139,92,246,.4);background:rgba(139,92,246,.08);color:#c4b0ff}
+.ph-note{font-size:13px;color:var(--mut);font-style:italic;margin-top:8px}
+.pr{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:820px){.pr{grid-template-columns:repeat(3,1fr)}}
+.pc{padding:28px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--surf),#0c0c0f);transition:.25s}
+.pc:hover{border-color:#34344a;transform:translateY(-3px)}
+.pc .n{font:400 12px "JetBrains Mono",monospace;color:var(--vio)}
+.pc h3{margin:10px 0 8px;font-size:18px;font-weight:600}
+.pc p{margin:0;color:var(--mut);font-size:15px}
+#contact{text-align:center;border-top:1px solid var(--line)}
+#contact::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 60% at 50% 0%,rgba(79,140,255,.1),transparent 70%);pointer-events:none}
+#contact .wrap{position:relative}
+#contact h2{font-size:clamp(32px,5vw,56px);max-width:760px;margin:0 auto 20px}
+.cl{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:32px 0 0}
+.mail{font:400 14px "JetBrains Mono",monospace;color:var(--mut);margin-top:20px}
+footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(--mut)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav aria-label="Primary"><div class="wrap"><a class="logo" href="#hero"><b>~/</b>om-sharma</a>
+<div class="links"><a href="#about">About</a><a href="#work">Work</a><a href="#stack">Expertise</a><a href="#experience">Experience</a><a href="#philosophy">Philosophy</a><a href="#contact">Contact</a></div></div></nav>
+
+<header id="hero"><canvas id="net" aria-hidden="true"></canvas>
+<div class="wrap">
+ <div class="meta"><span><i class="dot"></i>AI Engineer</span><span>@ Ksolves</span><span>Noida, India</span><span>Open to ambitious AI engineering opportunities</span></div>
+ <h1><span class="grad">Engineering Intelligence Into Production.</span></h1>
+ <p class="hero-p">I’m an AI Engineer building intelligent systems that connect LLMs, enterprise infrastructure, and real-world applications. My work focuses on agentic architectures, retrieval systems, AI security, and scalable AI engineering.</p>
+ <div class="ctas"><a class="btn pri" href="#work">Explore My Work →</a><a class="btn" href="#contact">Get In Touch</a></div>
+ <div class="hero-grid">
+  <div class="term" role="img" aria-label="Terminal: whoami — AI Engineer, Applied AI, Agentic Systems"><div class="bar"><i></i><i></i><i></i></div><div class="body"><div><span class="p">$</span> <span id="t1"></span></div><div class="o" id="t2"></div><span class="cur"></span></div></div>
+  <div class="flow"><div class="row" id="flow" role="tablist" aria-label="System architecture flow"></div><div class="cap" id="cap" aria-live="polite"></div></div>
+ </div>
+</div></header>
+
+<section id="about"><div class="wrap about">
+ <div class="rv"><div class="eyebrow">01 — About</div><h2>Practical AI systems, beyond simple LLM integrations.</h2>
+  <p>I’m an engineer interested in the harder half of applied AI: the architecture, authorization, retrieval, evaluation and operational discipline that turn a model call into a dependable product.</p>
+  <p>I work across the complete AI engineering lifecycle, from architecture and implementation through deployment and testing, with the backend engineering to make each layer production-ready.</p></div>
+ <div class="rv"><div class="cells" id="cells"></div></div>
+</div></section>
+
+<section id="work"><div class="wrap"><div class="rv"><div class="eyebrow">02 — Featured Projects</div><h2>Selected work.</h2><p class="lead" style="margin-bottom:40px">Expand any card for engineering contributions, architecture and status. Implemented work and planned enhancements are kept separate.</p></div><div id="projs"></div></div></section>
+
+<section id="stack"><div class="wrap"><div class="rv"><div class="eyebrow">03 — Technical Expertise</div><h2>Tools of the trade.</h2></div><div class="cats rv" id="cats" style="margin-top:36px"></div></div></section>
+
+<section id="experience"><div class="wrap"><div class="rv"><div class="eyebrow">04 — Experience</div><h2>Where I’ve built.</h2></div>
+<div class="tl rv" style="margin-top:40px">
+ <div class="job now"><h3>AI Engineer — Ksolves</h3><div class="d">July 2026 – Present</div>
+  <ul><li>Building enterprise AI systems spanning MCP infrastructure, RAG applications and LLM integrations.</li><li>Applying AI security practices and backend engineering across production workloads.</li></ul>
+  <div class="ph-note">[Placeholder: add team, scope or verified outcomes]</div></div>
+ <div class="job"><h3>AI Engineer Intern — Ksolves</h3><div class="d">January 2026 – July 2026</div>
+  <ul><li>Contributed to production AI applications and their reliability.</li><li>Worked on security implementations, backend migration and dependency optimization.</li></ul>
+  <span class="badge">★ Rising Star — quarterly recognition</span>
+  <div class="ph-note">[Placeholder: add quarter and details of the recognition]</div></div>
+</div></div></section>
+
+<section id="philosophy"><div class="wrap"><div class="rv"><div class="eyebrow">05 — Engineering Philosophy</div><h2>Beyond Making LLMs Work.</h2></div>
+<div class="pr rv" style="margin-top:36px">
+ <div class="pc"><div class="n">01</div><h3>Production Over Prototypes</h3><p>Build systems that are reliable, measurable, and scalable.</p></div>
+ <div class="pc"><div class="n">02</div><h3>Security By Design</h3><p>AI capabilities must be paired with authorization, validation, and responsible data handling.</p></div>
+ <div class="pc"><div class="n">03</div><h3>Systems Thinking</h3><p>The real engineering challenge lies in connecting models, tools, data, and infrastructure.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap rv"><div class="eyebrow">06 — Contact</div><h2><span class="grad">Have an interesting AI problem to solve?</span></h2>
+ <p class="lead" style="margin:0 auto">I’m open to ambitious AI engineering opportunities. Reach out and let’s talk.</p>
+ <div class="cl"><a class="btn pri" href="mailto:omsharmaa02@gmail.com?subject=AI%20engineering%20opportunity">Start a conversation →</a><a class="btn" href="https://linkedin.com/in/omsharma02" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/omsharmaaa" target="_blank" rel="noopener">GitHub</a></div>
+ <div class="mail">Email: <a href="mailto:omsharmaa02@gmail.com" style="color:var(--tx);border-bottom:1px solid var(--line)">omsharmaa02@gmail.com</a></div></div></section>
+
+<footer><div class="wrap"><span>© 2026 Om Sharma</span><span class="mono">linkedin.com/in/omsharma02 · github.com/omsharmaaa</span></div></footer>
+
+<script>
+const $=s=>document.querySelector(s);
+const esc=t=>t;
+// Flow
+const F=[["LLMs","Foundation models provide reasoning and language understanding."],["Agents","Agentic layers plan, delegate and coordinate across multiple steps."],["Tools","Tools exposed through MCP give agents authorized, typed capabilities."],["Enterprise Systems","Backend APIs, data stores and infrastructure where real work happens."],["Intelligence","Grounded, observable, secure outcomes delivered to the people who need them."]];
+const fl=$("#flow");let cur=0;
+F.forEach((f,i)=>{if(i){const l=document.createElement("div");l.className="link";fl.append(l)}const b=document.createElement("button");b.className="node";b.textContent=f[0];b.setAttribute("role","tab");b.onclick=b.onmouseenter=()=>sel(i);fl.append(b)});
+const nodes=[...fl.querySelectorAll(".node")];
+function sel(i){cur=i;nodes.forEach((n,j)=>{n.classList.toggle("on",j==i);n.setAttribute("aria-selected",j==i)});$("#cap").innerHTML="<b>"+F[i][0]+"</b> — "+F[i][1]}
+sel(0);let auto=setInterval(()=>sel((cur+1)%5),2800);fl.onmouseenter=()=>clearInterval(auto);
+// Terminal
+(function(){const a="whoami",b="AI Engineer | Applied AI | Agentic Systems";let i=0;const t=()=>{if(i<=a.length){$("#t1").textContent=a.slice(0,i++);setTimeout(t,90)}else{let j=0;const u=()=>{$("#t2").textContent=b.slice(0,j++);if(j<=b.length)setTimeout(u,28)};setTimeout(u,300)}};setTimeout(t,500)})();
+// About cells
+[["Production AI apps","Application development"],["Multi-agent","Architectures"],["MCP","Model Context Protocol"],["RAG","Retrieval-Augmented Generation"],["Evaluation","LLM eval & observability"],["Security","AI guardrails"],["Backend","APIs & services"],["Lifecycle","Design → deploy → test"]].forEach(c=>{$("#cells").insertAdjacentHTML("beforeend",`<div>${c[0]}<small>${c[1]}</small></div>`)});
+// Projects
+const P=[
+{t:"DOCSIS PNM MCP Server",s:"An enterprise-grade Model Context Protocol server that lets AI assistants interact with DOCSIS PNM infrastructure.",c:["Custom MCP server built with FastMCP","40+ authorized tools and backend integrations","JWT-based authentication and role-based authorization","Integration with enterprise backend APIs","HTTP transport and deployment","Authentication-aware tool execution","Security-first architecture"],a:["AI Assistant","FastMCP Server","JWT + RBAC","Enterprise APIs"],k:["Python","FastMCP","MCP","FastAPI","JWT","OAuth","Docker","REST APIs"],i:"Server, authorization and backend integrations as listed above.",p:"[Placeholder: planned enhancements]"},
+{t:"AI Helpdesk — Enterprise RAG Platform",s:"An intelligent enterprise helpdesk powered by retrieval-augmented generation.",c:["Hybrid retrieval architecture","Vector search plus BM25-based sparse retrieval","FastAPI backend","LLM integration and response generation","Query processing and retrieval optimization","Langfuse-based observability and monitoring"],a:["Query","Processing","Qdrant + BM25","LLM","Response"],k:["Python","FastAPI","RAG","Qdrant","BM25","Langfuse","LLMs"],i:"Hybrid retrieval, backend, generation and observability as listed above.",p:"[Placeholder: planned enhancements]"},
+{t:"AI Security & Guardrails Framework",s:"A security layer protecting enterprise AI applications from unsafe interactions and prompt injection attempts.",c:["LLM-based input and output security checks","Guardrails and unsafe prompt detection","User-level violation tracking","Automated security enforcement","Model evaluation and false-positive analysis","Integration with AI application workflows"],a:["User input","Input guard","App LLM","Output guard","User"],k:["Python","FastAPI","LLM Guardrails","Qwen Guard","Llama Guard","NVIDIA Garak","Langfuse"],i:"Input/output checks, enforcement, tracking and evaluation as listed above.",p:"[Placeholder: planned enhancements]"}];
+P.forEach((p,n)=>{const d=document.createElement("article");d.className="proj rv";d.innerHTML=`<button aria-expanded="false" aria-controls="pp${n}"><div class="ph"><div><div class="num">0${n+1}</div><h3>${p.t}</h3><p class="sum">${p.s}</p><div class="tags">${p.k.slice(0,4).map(k=>`<span class="tag">${k}</span>`).join("")}</div></div><span class="chev" aria-hidden="true">⌄</span></div></button>
+<div class="panel" id="pp${n}"><div><div class="pin"><h4>Architecture</h4><div class="arch">${p.a.map((x,i)=>(i?"<i>→</i>":"")+`<span>${x}</span>`).join("")}</div>
+<h4>Engineering contributions</h4><ul>${p.c.map(x=>`<li>${x}</li>`).join("")}</ul>
+<div class="status"><div class="a"><b>Implemented</b>${p.i}</div><div class="b"><b>Planned</b>${p.p}</div></div>
+<h4>Tech stack</h4><div class="tags" style="margin:0 0 24px">${p.k.map(k=>`<span class="tag">${k}</span>`).join("")}</div>
+<a class="gh" href="https://github.com/omsharmaaa" target="_blank" rel="noopener">GitHub ↗ <span class="mono" style="color:var(--mut);font-size:12px">[repo link placeholder]</span></a></div></div></div>`;
+const b=d.querySelector("button");b.onclick=()=>{const o=d.classList.toggle("open");b.setAttribute("aria-expanded",o)};$("#projs").append(d)});
+// Stack
+[["AI Engineering","Models, agents and evaluation",["LLMs","RAG","Agentic AI","MCP","Multi-Agent Systems","Prompt Engineering","LLM Evaluation"]],["Backend Engineering","Services and APIs",["Python","FastAPI","Flask","REST APIs","Async Programming"]],["AI Infrastructure","Data, messaging and observability",["Docker","Redis","Kafka","Qdrant","Vector Databases","Langfuse"]],["Security","Protecting AI systems",["LLM Guardrails","Prompt Injection Defense","JWT","OAuth","RBAC"]]].forEach(c=>{$("#cats").insertAdjacentHTML("beforeend",`<div class="cat"><h3>${c[0]}</h3><p>${c[1]}</p><div class="tags" style="margin:0">${c[2].map(k=>`<span class="tag">${k}</span>`).join("")}</div></div>`)});
+// Reveal
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.08});
+document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+// Network canvas
+(function(){const c=$("#net"),x=c.getContext("2d");if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;let w,h,N=[];
+const rs=()=>{w=c.width=c.offsetWidth;h=c.height=c.offsetHeight;N=Array.from({length:Math.min(60,w/20|0)},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25}))};
+rs();addEventListener("resize",rs);let m={x:-999,y:-999};addEventListener("pointermove",e=>{const r=c.getBoundingClientRect();m={x:e.clientX-r.left,y:e.clientY-r.top}});
+(function f(){x.clearRect(0,0,w,h);N.forEach(a=>{a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1});
+for(let i=0;i<N.length;i++){const a=N[i];for(let j=i+1;j<N.length;j++){const b=N[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<140){x.strokeStyle=`rgba(110,140,255,${.22*(1-d/140)})`;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}
+const dm=Math.hypot(a.x-m.x,a.y-m.y);x.fillStyle=dm<120?"rgba(160,130,255,.9)":"rgba(130,160,255,.5)";x.beginPath();x.arc(a.x,a.y,dm<120?2.4:1.6,0,7);x.fill()}
+requestAnimationFrame(f)})()})();
+</script>
+</body>
+</html>
